@@ -1,3 +1,6 @@
 {
-  "*.{ts.tsx}": ["prettier --write", "tslint --fix --force --format stylish --project ./tsconfig.json"]
+  "*.{ts.tsx}": [
+    "prettier --write",
+    "tslint --fix --force --format stylish --project ./tsconfig.json"
+  ]
 }
