@@ -11,12 +11,15 @@ class App extends React.Component {
           <img src={logoSvg} className="App-logo" alt="logo" />
 
           <h1 className="App-title">Welcome to React</h1>
-        </header>
+                        </header>
 
-        <p className="App-intro">
+<p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+        </p                 >
+
+
+
+      </                    div>
     );
   }
 }
