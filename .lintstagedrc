@@ -1,6 +1,7 @@
 {
-  "*.{ts.tsx}": [
+  "*.{ts,tsx}": [
     "prettier --write",
-    "tslint --fix --force --format stylish --project ./tsconfig.json"
+    "tslint --fix --force --format stylish --project ./tsconfig.json",
+    "git add"
   ]
 }
