@@ -2,7 +2,7 @@ import * as React from 'react';
 import './App.css';
 
 import logoSvg from './logo.svg';
-
+import { TestHello } from './react/molecules/TestHello';
 class App extends React.Component {
   public render() {
     return (
@@ -11,6 +11,7 @@ class App extends React.Component {
           <img src={logoSvg} className="App-logo" alt="logo" />
 
           <h1 className="App-title">Welcome to React</h1>
+          <TestHello>Hello~~~</TestHello>
         </header>
 
         <p className="App-intro">
