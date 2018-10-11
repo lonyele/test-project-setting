@@ -6,7 +6,7 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts-ts": "3.1.0",
-    "styled-components": "^4.0.0-beta.11.2"
+    "styled-components": "^4.0.0-beta.11.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -15,7 +15,9 @@
     "eject": "react-scripts-ts eject",
     "tslint:prettier-check": "tslint-config-prettier-check ./tslint.json",
     "tslint": "tslint --fix --force --format stylish --project ./tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}",
-    "prettier": "prettier --write ./{src,__tests__}/**/*.{ts,tsx}"
+    "prettier": "prettier --write ./{src,__tests__}/**/*.{ts,tsx}",
+    "lint:css": "stylelint './src/**/*.{js, ts, tsx}' --formatter verbose",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "devDependencies": {
     "@types/jest": "^23.3.3",
@@ -26,6 +28,11 @@
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
+    "stylelint": "^9.6.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.5.0",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",

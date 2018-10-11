@@ -6,6 +6,13 @@ export const TestHello = styled.h1`
   color: palevioletred;
 `;
 
+// export const TestHello = styled.h1`
+//   fonttt-size: 1.5em;
+//   text-align: center;
+//   coloooor: palevioletred;
+//   whattt: theeeee;
+// `;
+
 // export interface TestHello {
 //   message: string;
 // }
