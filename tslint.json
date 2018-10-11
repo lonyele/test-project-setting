@@ -1,5 +1,7 @@
 {
-  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
   "extends": [
     "tslint:latest",
     "tslint-react",
@@ -20,6 +22,7 @@
     "member-ordering": false,
     "jsx-no-lambda": false,
     "interface-name": false,
-    "variable-name": false
+    "variable-name": false,
+    "import-name": false
   }
 }
