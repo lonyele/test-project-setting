@@ -9,10 +9,10 @@
     "styled-components": "^4.0.0-beta.11.3"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
+    "start": "react-app-rewired start --scripts-version react-scripts-ts",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts-ts",
+    "eject": "react-scripts eject",
     "tslint:prettier-check": "tslint-config-prettier-check ./tslint.json",
     "tslint": "tslint --fix --force --format stylish --project ./tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}",
     "prettier": "prettier --write ./{src,__tests__}/**/*.{ts,tsx}",
@@ -28,6 +28,8 @@
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
+    "react-app-rewire-styled-components": "^3.0.2",
+    "react-app-rewired": "^1.6.2",
     "stylelint": "^9.6.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-recommended": "^2.1.0",
