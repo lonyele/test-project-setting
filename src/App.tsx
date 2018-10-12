@@ -3,7 +3,18 @@ import './App.css';
 
 import logoSvg from './logo.svg';
 import { TestHello } from './react/molecules/TestHello';
+
 class App extends React.Component {
+  public state = {
+    color: 'orange'
+  };
+
+  private onChangeSkyblue = () => {
+    this.setState({ color: 'skyblue' });
+  };
+  private onChangeGreen = () => {
+    this.setState({ color: 'green' });
+  };
   public render() {
     return (
       <div className="App">
@@ -11,10 +22,11 @@ class App extends React.Component {
           <img src={logoSvg} className="App-logo" alt="logo" />
 
           <h1 className="App-title">Welcome to React</h1>
-          <TestHello>Hello~~~</TestHello>
+          <TestHello message="Hello~~~" />
         </header>
-
-        <p className="App-intro">
+        <button onClick={this.onChangeSkyblue}>Make skyblue</button>
+        <button onClick={this.onChangeGreen}>Make green</button>
+        <p className="App-intro" style={{ backgroundColor: this.state.color }}>
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
       </div>
