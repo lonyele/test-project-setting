@@ -20,7 +20,8 @@
     "tslint": "tslint --fix --force --format stylish --project ./tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}",
     "prettier": "prettier --write ./{src,__tests__}/**/*.{ts,tsx}",
     "lint:css": "stylelint './src/**/*.{js, ts, tsx}' --formatter verbose",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "stylelint-check": "stylelint-config-prettier-check",
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.14",
@@ -31,6 +32,7 @@
     "@types/react-dom": "^16.0.8",
     "@types/react-test-renderer": "^16.0.3",
     "@types/styled-components": "^4.0.0",
+    "cypress": "^3.1.0",
     "husky": "^1.1.1",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
