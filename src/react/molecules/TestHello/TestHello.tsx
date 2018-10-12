@@ -1,9 +1,13 @@
+import * as React from 'react';
 import styled from 'styled-components';
 
-export const TestHello = styled.h1`
+import { ITestHello } from './TestHello.type';
+
+const TestHello = styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
+  border: 1px solid black;
 `;
 
 // export const TestHello = styled.h1`
@@ -13,11 +17,7 @@ export const TestHello = styled.h1`
 //   whattt: theeeee;
 // `;
 
-// export interface TestHello {
-//   message: string;
-// }
-
-// export const TestHello = (props: TestHello) => {
-//   const { message } = props;
-//   return <Hello>{message}</Hello>;
-// };
+export default (props: ITestHello) => {
+  const { message } = props;
+  return <TestHello>{message}</TestHello>;
+};

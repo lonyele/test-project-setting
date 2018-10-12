@@ -11,7 +11,7 @@ class App extends React.Component {
           <img src={logoSvg} className="App-logo" alt="logo" />
 
           <h1 className="App-title">Welcome to React</h1>
-          <TestHello>Hello~~~</TestHello>
+          <TestHello message="Hello~~~" />
         </header>
 
         <p className="App-intro">
