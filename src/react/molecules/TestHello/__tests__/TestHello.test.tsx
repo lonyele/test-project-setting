@@ -14,7 +14,7 @@ describe('TestHello describe~~~', () => {
   });
 
   it('should render with corret message that has passed', () => {
-    const wrapped = shallow(<TestHello message="ASdfsf" />);
+    const wrapped = shallow(<TestHello message="ASdfsf!!!!!!!!!!!!!!" />);
     expect(wrapped.text()).toEqual('ASdfsf');
   });
 
