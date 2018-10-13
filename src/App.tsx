@@ -4,7 +4,7 @@ import './App.css';
 import logoSvg from './logo.svg';
 import { TestHello } from './react/molecules/TestHello';
 
-class App extends React.Component {
+class App extends React.Component<any, { color: string }> {
   public state = {
     color: 'orange'
   };
