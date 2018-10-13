@@ -17,6 +17,9 @@ const TestHello = styled.h1`
 //   whattt: theeeee;
 // `;
 
+/**
+ * Simple component to test
+ */
 export default (props: ITestHello) => {
   const { message } = props;
   return <TestHello>{message}</TestHello>;

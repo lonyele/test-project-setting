@@ -21,7 +21,9 @@
     "prettier": "prettier --write ./{src,__tests__}/**/*.{ts,tsx}",
     "lint:css": "stylelint './src/**/*.{js, ts, tsx}' --formatter verbose",
     "stylelint-check": "stylelint-config-prettier-check",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.14",
@@ -38,6 +40,8 @@
     "prettier": "^1.14.3",
     "react-app-rewire-styled-components": "^3.0.2",
     "react-app-rewired": "^1.6.2",
+    "react-docgen-typescript": "^1.10.0",
+    "react-styleguidist": "^7.3.10",
     "stylelint": "^9.6.0",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-recommended": "^2.1.0",
