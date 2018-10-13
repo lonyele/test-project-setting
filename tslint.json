@@ -21,6 +21,7 @@
     "jsx-no-lambda": false,
     "interface-name": false,
     "variable-name": false,
-    "import-name": false
+    "import-name": false,
+    "no-implicit-dependencies": [true, "dev"]
   }
 }
