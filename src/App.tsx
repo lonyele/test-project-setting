@@ -26,6 +26,7 @@ class App extends React.Component<any, { color: string }> {
         </header>
         <button onClick={this.onChangeSkyblue}>Make skyblue</button>
         <button onClick={this.onChangeGreen}>Make green</button>
+        <div>Test running circle for PR again2</div>
         <p className="App-intro" style={{ backgroundColor: this.state.color }}>
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
