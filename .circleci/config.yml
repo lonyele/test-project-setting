@@ -33,6 +33,9 @@ jobs:
           name: Run Tslint
           command: yarn tslint
       - run:
+          name: Run Stylelint
+          command: yarn lint:css
+      - run:
           name: Running E2E tests
           command: yarn circle-ci:cypress
       - store_artifacts:
