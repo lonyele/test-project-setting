@@ -8,11 +8,10 @@ jobs:
           ## this enables colors in the output
           TERM: xterm
     working_directory: ~/app
-    parallelism: 1
     steps:
       - checkout
       - run: echo "hello world" # run the `echo` command
-       - restore_cache:
+      - restore_cache:
           name: Restore Yarn Package Cache
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
