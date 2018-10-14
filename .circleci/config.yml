@@ -34,7 +34,7 @@ jobs:
           command: yarn tslint
       - run:
           name: Running E2E tests
-          command: cypress run
+          command: yarn circle-ci:cypress
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
