@@ -42,3 +42,12 @@ jobs:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
+
+      - setup_remote_docker: # (2)
+          docker_layer_caching: true # (3)
+      - run:
+          name: Build and push Docker image
+          command: |
+            docker build -t lonyele/test-react .
+            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
+            docker push lonyele/test-react
