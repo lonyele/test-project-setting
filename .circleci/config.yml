@@ -1,12 +1,12 @@
 version: 2
 jobs:
-    test:
+    test:   
         docker:
         # the Docker image with Cypress dependencies
             - image: cypress/base:8
                 environment:
-                ## this enables colors in the output
-                TERM: xterm
+                     ## this enables colors in the output
+                    TERM: xterm
         working_directory: ~/app
         steps:
             - checkout
