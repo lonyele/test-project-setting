@@ -1,8 +1,10 @@
 version: 2
 jobs:
   build:
+    machine: true
     docker:
       # the Docker image with Cypress dependencies
+      - image: docker:18.06.1-ce
       - image: cypress/base:8
         environment:
           ## this enables colors in the output
