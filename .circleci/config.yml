@@ -3,58 +3,58 @@ jobs:
     test:
         docker:
         # the Docker image with Cypress dependencies
-        - image: cypress/base:8
-            environment:
-            ## this enables colors in the output
-            TERM: xterm
-        working_directory: ~/app
-        steps:
-        - checkout
-        - run: echo "hello world" # run the `echo` command
-        - restore_cache:
-            name: Restore Yarn Package Cache
-            keys:
-                - yarn-packages-{{ checksum "yarn.lock" }}
-        - run:
-            name: Install Dependencies
-            command: yarn install
-        - save_cache:
-            name: Save Yarn Package Cache
-            key: yarn-packages-{{ checksum "yarn.lock" }}
-            paths:
-                - ~/.cache/yarn
-        - run:
-            name: Run Test
-            command: yarn test
-        - run:
-            name: Run Prettier?
-            command: yarn prettier
-        - run:
-            name: Run Tslint
-            command: yarn tslint
-        - run:
-            name: Run Stylelint
-            command: yarn lint:css
-        - run:
-            name: Running E2E tests
-            command: yarn circle-ci:cypress
-        - store_artifacts:
-            path: cypress/videos
-        - store_artifacts:
-            path: cypress/screenshots
+            - image: cypress/base:8
+                environment:
+                ## this enables colors in the output
+                TERM: xterm
+            working_directory: ~/app
+            steps:
+            - checkout
+            - run: echo "hello world" # run the `echo` command
+            - restore_cache:
+                name: Restore Yarn Package Cache
+                keys:
+                    - yarn-packages-{{ checksum "yarn.lock" }}
+            - run:
+                name: Install Dependencies
+                command: yarn install
+            - save_cache:
+                name: Save Yarn Package Cache
+                key: yarn-packages-{{ checksum "yarn.lock" }}
+                paths:
+                    - ~/.cache/yarn
+            - run:
+                name: Run Test
+                command: yarn test
+            - run:
+                name: Run Prettier?
+                command: yarn prettier
+            - run:
+                name: Run Tslint
+                command: yarn tslint
+            - run:
+                name: Run Stylelint
+                command: yarn lint:css
+            - run:
+                name: Running E2E tests
+                command: yarn circle-ci:cypress
+            - store_artifacts:
+                path: cypress/videos
+            - store_artifacts:
+                path: cypress/screenshots
     build:
         docker:
-        - image: docker:18.06.1-ce
-        steps:
-        - checkout
-        - setup_remote_docker: # (2)
-            docker_layer_caching: true # (3)
-        - run:
-            name: Build and push Docker image
-            command: |
-            docker build -t lonyele/test-react .
-            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
-            docker push lonyele/test-react
+            - image: docker:18.06.1-ce
+            steps:
+            - checkout
+            - setup_remote_docker: # (2)
+                docker_layer_caching: true # (3)
+            - run:
+                name: Build and push Docker image
+                command: |
+                docker build -t lonyele/test-react .
+                echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
+                docker push lonyele/test-react
 
 workflows:
   version: 2
